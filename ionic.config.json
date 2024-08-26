@@ -1,0 +1,7 @@
+{
+  "name": "parcialp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
