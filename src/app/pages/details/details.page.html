@@ -3,15 +3,18 @@
    <ion-card>
      <ion-card-content>
        <ng-container *ngIf="product">
-         <h1>{{product.title}}</h1><br>
+         <span class="title"><h1>{{product.title}}</h1></span><br>
          <img [src]="product.image" alt="{{product.title}}">
-         <b>{{product.category}} </b>
-         {{product.price | currency:'USD'}}<br><br>
+         <b class="category">{{product.category}}</b><br>
+         <span class="price">{{product.price | currency:'USD'}}</span><br><br>
          <b>Description</b><br>
          {{product.description}}<br><br>
-         Rating: {{product.rating.rate}}<ion-icon name="star"></ion-icon> ({{product.rating.count}} reviews)
+         <span class="rating">Rating: {{product.rating.rate}}<ion-icon name="star"></ion-icon> ({{product.rating.count}} reviews)
+         </span>
          <br><br>
-         <ion-button expand="block" (click)="addToCart()">ADD TO CART</ion-button>
+         <div class="button-container">
+           <ion-button expand="block" (click)="addToCart()">ADD TO CART</ion-button>
+         </div>
        </ng-container>
      </ion-card-content>
    </ion-card>

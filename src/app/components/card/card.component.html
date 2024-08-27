@@ -6,17 +6,19 @@
           {{product.title}}
         </ion-card-header>
         <ion-card-content>
-          <img [src]="product.image" alt="{{product.title}}">
+          <img [src]="product.image" alt="{{product.title}}"><br>
           <div class="category">
             {{product.category}}
-          </div>
-          <div class="rating">
-            Rating: {{product.rating.rate}} ({{product.rating.count}} reviews)
           </div>
           <div class="price">
             {{product.price | currency:'USD'}}
           </div>
+          <div class="rating">
+            Rating: {{product.rating.rate}} ({{product.rating.count}} reviews)
+          </div><br>
+          <div class="ion-text-center">
           <ion-button (click)="click(product.id)">Ver detalles</ion-button>
+        </div>
         </ion-card-content>
       </ion-card>
     </ion-col>

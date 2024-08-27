@@ -1,7 +1,7 @@
 ion-card {
   margin: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
 
   ion-card-header {
     font-weight: bold;
@@ -9,7 +9,7 @@ ion-card {
     background-color: #f8f9fa;
     color: #343a40;
     padding: 10px;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid #0080ff;
   }
 
   ion-card-content {
