@@ -6,12 +6,15 @@
       <ion-select aria-label="categories" placeholder="Select category" (ionChange)="OptionCategory($event)">
         <ion-select-option value="electronics">Electronics</ion-select-option>
         <ion-select-option value="jewelery">Jewelery</ion-select-option>
-        <ion-select-option value="men's clothing">MenSClothing</ion-select-option>
-        <ion-select-option value="women's clothing">WomenSClothing</ion-select-option>
+        <ion-select-option value="men's clothing">Men's Clothing</ion-select-option>
+        <ion-select-option value="women's clothing">Women's Clothing</ion-select-option>
       </ion-select>
     </ion-item>
   </ion-list>
-  <app-card (doClick)="doNavigate($event)" *ngFor="let prod of products" [product]="prod"></app-card>
+
+  <div class="product_container">
+    <app-card (doClick)="doNavigate($event)" *ngFor="let prod of products" [product]="prod"></app-card>
+  </div>
   
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button [routerLink]="['cart']">
