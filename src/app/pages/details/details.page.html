@@ -1,18 +1,18 @@
 <ion-content [fullscreen]="true">
-    <ion-title>DETAILS</ion-title>
-    <ion-card>
- <ion-card-content>
-    @if(product){
-    <h1>{{product.title}}</h1><br>
-    <img [src]="product.image" alt="{{product.title}}">
- <b>{{product.category}} </b>
- {{product.price | currency:'USD'}}<br><br>
- <b>Description</b><br>
- {{product.description}}<br><br>
-Rating: {{product.rating.rate}}<ion-icon name="star"></ion-icon> ({{product.rating.count}} reviews)
-    }
-    <br><br>
-    <ion-button expand="block">ADD TO CARD</ion-button>
- </ion-card-content> 
- </ion-card>
-</ion-content>
+   <ion-title>DETAILS</ion-title>
+   <ion-card>
+     <ion-card-content>
+       <ng-container *ngIf="product">
+         <h1>{{product.title}}</h1><br>
+         <img [src]="product.image" alt="{{product.title}}">
+         <b>{{product.category}} </b>
+         {{product.price | currency:'USD'}}<br><br>
+         <b>Description</b><br>
+         {{product.description}}<br><br>
+         Rating: {{product.rating.rate}}<ion-icon name="star"></ion-icon> ({{product.rating.count}} reviews)
+         <br><br>
+         <ion-button expand="block" (click)="addToCart()">ADD TO CART</ion-button>
+       </ng-container>
+     </ion-card-content>
+   </ion-card>
+ </ion-content>

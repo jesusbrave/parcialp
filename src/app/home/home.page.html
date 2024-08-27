@@ -1,5 +1,6 @@
 <ion-content [fullscreen]="true"> 
   <ion-title>BRAVE VIRTUAL SHOP</ion-title>
+  
   <ion-list>
     <ion-item>
       <ion-select aria-label="categories" placeholder="Select category" (ionChange)="OptionCategory($event)">
@@ -11,4 +12,10 @@
     </ion-item>
   </ion-list>
   <app-card (doClick)="doNavigate($event)" *ngFor="let prod of products" [product]="prod"></app-card>
+  
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button [routerLink]="['cart']">
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from '../services/http.service';
 import { CardComponent } from '../components/card/card.component';
+import { CartComponent } from '../pages/cart/cart.component';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { CardComponent } from '../components/card/card.component';
     HomePageRoutingModule,
     HttpClientModule
   ],
-  declarations: [HomePage, CardComponent],
+  declarations: [HomePage, CardComponent, CartComponent],
   providers: [HttpService]
 })
 export class HomePageModule {}
