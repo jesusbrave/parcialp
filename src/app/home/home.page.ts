@@ -12,15 +12,18 @@ import { NavController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 public products: ProductsResponse[]=[];
+url = environment.URL_BASE + "products";
   constructor(private readonly httpSrv: HttpService, private readonly navCtr: NavController) {}
 
   async ngOnInit() {
-    const url = environment.URL_BASE + "products";
-    this.products = await this.httpSrv.get<ProductsResponse[]>(url);
+    this.products = await this.httpSrv.get<ProductsResponse[]>(this.url);
   }
 
   public doNavigate(id: number){
     console.log(event);
      this.navCtr.navigateForward("details/"+id);
+  }
+  async OptionCategory(event: any){
+    this.products = await this.httpSrv.get<ProductsResponse[]>(this.url + '/category/' + event.detail.value);
   }
 }
